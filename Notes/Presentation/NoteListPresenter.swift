@@ -66,7 +66,7 @@ final class DefaultNoteListPresenter: NoteListPresenter {
         deleter.delete(note) { result in
             switch result {
             case .success(let note):
-                self.view?.display("Berhasil menghapus note dengan nama : \(note.name)")
+                self.view?.display("Succefully deletes a note with name : \(note.name)")
                 self.notes.remove(at: row)
                 self.view?.removeView(at: row)
                 self.view?.displayHeaderText(self.getNoteCountText())
@@ -78,7 +78,7 @@ final class DefaultNoteListPresenter: NoteListPresenter {
     }
     
     func onDeleteAllTapped() {
-        view?.displayDeleteAllAlert("Apakah Anda yakin ingin menghapus semua note?")
+        view?.displayDeleteAllAlert("Are you sure you want to delete all notes?")
     }
     
     func onConfirmDeleteAllNotes() {
@@ -86,7 +86,7 @@ final class DefaultNoteListPresenter: NoteListPresenter {
             switch result {
             case .success:
                 self.notes.removeAll()
-                self.view?.display("Berhasil menghapus semua note.")
+                self.view?.display("Successfully deleted all notes.")
                 self.view?.reloadView()
                 self.view?.displayHeaderText(self.getNoteCountText())
                 self.view?.setDeleteAllButtonEnabled(false)
@@ -101,7 +101,7 @@ final class DefaultNoteListPresenter: NoteListPresenter {
             switch result {
             case .success(let note):
                 self.notes.append(note)
-                self.view?.display("Berhasil menambahkan note dengan nama: \(note.name)")
+                self.view?.display("Successfully added note with name: \(note.name)")
                 self.view?.reloadView()
                 self.view?.displayHeaderText(self.getNoteCountText())
             case .failure(let error):

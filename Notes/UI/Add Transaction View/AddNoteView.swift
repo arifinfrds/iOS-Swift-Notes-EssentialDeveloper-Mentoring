@@ -53,7 +53,7 @@ private struct AddNoteContentView: View {
 		} else {
 			Form {
 				Section(header: Text("General")) {
-					TextField("Nama", text: $viewModel.noteName)
+					TextField("Name", text: $viewModel.noteName)
 				}
 				
 				Section(header: Text("Description")) {
@@ -63,7 +63,7 @@ private struct AddNoteContentView: View {
 				Section {
 					HStack {
 						DatePicker(
-							"Tanggal",
+							"Date",
 							selection: $viewModel.noteCreatedDate,
 							displayedComponents: [.date]
 						)

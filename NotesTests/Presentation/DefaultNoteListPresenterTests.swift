@@ -84,7 +84,7 @@ class DefaultNoteListPresenterTests: XCTestCase {
         
         let selectedRow = 0
         sut.onDelete(selectedNote, at: selectedRow)
-        let successfullMessage = "Berhasil menghapus note dengan nama : \(selectedNote.name)"
+        let successfullMessage = "Succefully deletes a note with name : \(selectedNote.name)"
         view.complete(with: successfullMessage)
         
         XCTAssertEqual(view.message, successfullMessage)
@@ -101,7 +101,7 @@ class DefaultNoteListPresenterTests: XCTestCase {
         
         let selectedRow = 0
         sut.onDelete(selectedNote, at: selectedRow)
-        let successfullMessage = "Berhasil menghapus note dengan nama : \(selectedNote.name)"
+        let successfullMessage = "Succefully deletes a note with name : \(selectedNote.name)"
         view.complete(with: successfullMessage)
         
         XCTAssertEqual(view.message, successfullMessage)
@@ -115,7 +115,7 @@ class DefaultNoteListPresenterTests: XCTestCase {
         
         sut.onDeleteAllTapped()
         
-        let alertMessage = "Apakah Anda yakin ingin menghapus semua note?"
+        let alertMessage = "Are you sure you want to delete all notes?"
         XCTAssertEqual(view.message, alertMessage)
     }
     
@@ -123,7 +123,7 @@ class DefaultNoteListPresenterTests: XCTestCase {
         let (sut, view) = makeSUT()
         
         sut.onConfirmDeleteAllNotes()
-        let successfullMessage = "Berhasil menghapus semua note."
+        let successfullMessage = "Successfully deleted all notes."
         view.complete(with: successfullMessage)
         view.complete(with: [])
         
@@ -138,7 +138,7 @@ class DefaultNoteListPresenterTests: XCTestCase {
         
         let newNote = uniqueNote()
         sut.onAdd(newNote)
-        let successfullMessage = "Berhasil menambahkan note dengan nama: \(newNote.name)"
+        let successfullMessage = "Successfully added note with name: \(newNote.name)"
         view.complete(with: successfullMessage)
         view.complete(with: [newNote])
         

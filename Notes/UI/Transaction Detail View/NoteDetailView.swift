@@ -19,17 +19,17 @@ struct NoteDetailView: View {
         } else {
             Form {
                 Section {
-                    NoteDetailItemCell(title: "Nama", subtitle: $viewModel.noteName)
+                    NoteDetailItemCell(title: "Name", subtitle: $viewModel.noteName)
                 }
                 
                 Section {
-                    NoteDetailItemCell(title: "Deskripsi", subtitle: $viewModel.noteDescription)
+                    NoteDetailItemCell(title: "Description", subtitle: $viewModel.noteDescription)
                 }
                 
                 Section {
                     HStack {
                         DatePicker(
-                            "Tanggal",
+                            "Date",
                             selection: $viewModel.noteCreatedDate,
                             displayedComponents: [.date]
                         )

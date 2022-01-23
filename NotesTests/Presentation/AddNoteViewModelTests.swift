@@ -23,8 +23,8 @@ class AddNoteViewModelTests: XCTestCase {
         
         XCTAssertTrue(adder.messages.isEmpty)
         
-        XCTAssertEqual(sut.errorTitle, "Perhatian")
-        XCTAssertEqual(sut.errorMessage, "Field nama tidak boleh kosong")
+        XCTAssertEqual(sut.errorTitle, "Oops..")
+        XCTAssertEqual(sut.errorMessage, "Name field cannot be empty")
         XCTAssertTrue(sut.shouldShowErrorAlert)
         
         sut.onDismissedErrorAlert()
@@ -76,8 +76,8 @@ class AddNoteViewModelTests: XCTestCase {
         XCTAssertTrue(sut.errorMessage.isEmpty)
         
         XCTAssertTrue(sut.shouldShowSuccessAddAlert)
-        XCTAssertEqual(sut.successAddTitle, "Sukses")
-        XCTAssertEqual(sut.successAddMessage, "Berhasil menambah note : \(noteToAdd.name)")
+        XCTAssertEqual(sut.successAddTitle, "Succeeds")
+        XCTAssertEqual(sut.successAddMessage, "Successfully added a note : \(noteToAdd.name)")
         
         sut.onDismissedErrorAlert()
         

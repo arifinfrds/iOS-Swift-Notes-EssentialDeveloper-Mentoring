@@ -41,8 +41,8 @@ final class AddNoteViewModel: ObservableObject {
 		
 		guard !noteName.isEmpty || noteName != "" else {
 			shouldShowErrorAlert = true
-			errorTitle = "Perhatian"
-			errorMessage = "Field nama tidak boleh kosong"
+			errorTitle = "Oops.."
+			errorMessage = "Name field cannot be empty"
 			return
 		}
 		
@@ -59,8 +59,8 @@ final class AddNoteViewModel: ObservableObject {
 			
 			switch result {
 			case let .success(addedNote):
-				self.successAddTitle = "Sukses"
-				self.successAddMessage = "Berhasil menambah note : \(addedNote.name)"
+				self.successAddTitle = "Succeeds"
+				self.successAddMessage = "Successfully added a note : \(addedNote.name)"
 				self.shouldShowSuccessAddAlert = true
 				
 			case .failure:

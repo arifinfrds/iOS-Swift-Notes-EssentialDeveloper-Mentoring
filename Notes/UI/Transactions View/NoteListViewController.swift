@@ -56,7 +56,7 @@ extension NoteListViewController: NoteListView {
     }
     
     func displayDeleteAllAlert(_ message: String) {
-        let alertController = UIAlertController(title: "Perhatian", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Oops..", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in  self?.presenter.onConfirmDeleteAllNotes() }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
         alertController.addAction(okAction)
@@ -82,7 +82,7 @@ extension NoteListViewController: NoteListView {
     
     private func showAlert(_ message: String) {
         
-        let alertController = UIAlertController(title: "Sukses", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Succeeds", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
