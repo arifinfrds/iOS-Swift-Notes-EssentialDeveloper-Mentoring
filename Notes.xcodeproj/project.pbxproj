@@ -19,6 +19,11 @@
 		921304E025E77729008CB7B0 /* DateDisplayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921304DF25E77729008CB7B0 /* DateDisplayViewModelTests.swift */; };
 		921304E525E7887B008CB7B0 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921304E425E7887B008CB7B0 /* AddNoteView.swift */; };
 		921739C72771B50A00091E31 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921739C62771B50A00091E31 /* AddNoteViewModel.swift */; };
+		923555AF27BF390900BAF0A2 /* NoteFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923555AE27BF390900BAF0A2 /* NoteFlow.swift */; };
+		923555B227BF396A00BAF0A2 /* AddNoteViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923555B127BF396A00BAF0A2 /* AddNoteViewControllerFactory.swift */; };
+		923555B427BF399700BAF0A2 /* NoteDetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923555B327BF399700BAF0A2 /* NoteDetailViewControllerFactory.swift */; };
+		923555B627BF39AE00BAF0A2 /* EditNoteViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923555B527BF39AE00BAF0A2 /* EditNoteViewControllerFactory.swift */; };
+		923555B827BF39E000BAF0A2 /* NotesStoreToAnyPresentationUpdateAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923555B727BF39E000BAF0A2 /* NotesStoreToAnyPresentationUpdateAdapter.swift */; };
 		924BF76A25E54C7F00A8CDE9 /* DeleteNoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BF76925E54C7F00A8CDE9 /* DeleteNoteUseCaseTests.swift */; };
 		924BF76F25E54CF600A8CDE9 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BF76E25E54CF600A8CDE9 /* XCTestCase+MemoryLeakTracking.swift */; };
 		924BF77D25E5560600A8CDE9 /* DeleteAllNotesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BF77C25E5560600A8CDE9 /* DeleteAllNotesUseCaseTests.swift */; };
@@ -91,6 +96,11 @@
 		921304DF25E77729008CB7B0 /* DateDisplayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDisplayViewModelTests.swift; sourceTree = "<group>"; };
 		921304E425E7887B008CB7B0 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		921739C62771B50A00091E31 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		923555AE27BF390900BAF0A2 /* NoteFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFlow.swift; sourceTree = "<group>"; };
+		923555B127BF396A00BAF0A2 /* AddNoteViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewControllerFactory.swift; sourceTree = "<group>"; };
+		923555B327BF399700BAF0A2 /* NoteDetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewControllerFactory.swift; sourceTree = "<group>"; };
+		923555B527BF39AE00BAF0A2 /* EditNoteViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewControllerFactory.swift; sourceTree = "<group>"; };
+		923555B727BF39E000BAF0A2 /* NotesStoreToAnyPresentationUpdateAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStoreToAnyPresentationUpdateAdapter.swift; sourceTree = "<group>"; };
 		924BF76925E54C7F00A8CDE9 /* DeleteNoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteUseCaseTests.swift; sourceTree = "<group>"; };
 		924BF76E25E54CF600A8CDE9 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		924BF77C25E5560600A8CDE9 /* DeleteAllNotesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllNotesUseCaseTests.swift; sourceTree = "<group>"; };
@@ -171,6 +181,17 @@
 				92C5A76127587CE800C55CC3 /* PresentationUpdateable.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		923555B027BF395900BAF0A2 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				92A1475A25F6761A008823AF /* NoteListViewControllerFactory.swift */,
+				923555B127BF396A00BAF0A2 /* AddNoteViewControllerFactory.swift */,
+				923555B327BF399700BAF0A2 /* NoteDetailViewControllerFactory.swift */,
+				923555B527BF39AE00BAF0A2 /* EditNoteViewControllerFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		924BF76225E54C4E00A8CDE9 /* Store */ = {
@@ -282,9 +303,11 @@
 		9283D82F25E5F65900BE7072 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				923555B027BF395900BAF0A2 /* Factories */,
 				927E366025E20B080045F426 /* AppDelegate.swift */,
 				927E366225E20B080045F426 /* SceneDelegate.swift */,
-				92A1475A25F6761A008823AF /* NoteListViewControllerFactory.swift */,
+				923555AE27BF390900BAF0A2 /* NoteFlow.swift */,
+				923555B727BF39E000BAF0A2 /* NotesStoreToAnyPresentationUpdateAdapter.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -493,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923555B427BF399700BAF0A2 /* NoteDetailViewControllerFactory.swift in Sources */,
 				9203FB44273B8B7300240380 /* DateDisplayViewModel.swift in Sources */,
 				9252F7CB25E3F3A100FE7FBC /* NoteStore.swift in Sources */,
 				9283D86225E6063A00BE7072 /* ManagedNote+toModel.swift in Sources */,
@@ -516,9 +540,13 @@
 				92A1475B25F6761A008823AF /* NoteListViewControllerFactory.swift in Sources */,
 				92D8AAE1274C810100A9D7C9 /* NoteAdder.swift in Sources */,
 				927E366B25E20B080045F426 /* Notes.xcdatamodeld in Sources */,
+				923555AF27BF390900BAF0A2 /* NoteFlow.swift in Sources */,
+				923555B227BF396A00BAF0A2 /* AddNoteViewControllerFactory.swift in Sources */,
 				92D8AAE5274C82A100A9D7C9 /* LocalNoteAdder.swift in Sources */,
+				923555B627BF39AE00BAF0A2 /* EditNoteViewControllerFactory.swift in Sources */,
 				9252F7C225E3F35A00FE7FBC /* Note.swift in Sources */,
 				92D8AAE7274C82D500A9D7C9 /* LocalNoteDeleter.swift in Sources */,
+				923555B827BF39E000BAF0A2 /* NotesStoreToAnyPresentationUpdateAdapter.swift in Sources */,
 				92D8AAE3274C81D000A9D7C9 /* NoteDeleter.swift in Sources */,
 				92A86F43279DABC7001947C3 /* ManagedNote+CoreDataClass.swift in Sources */,
 				921304DA25E7628C008CB7B0 /* NoteCell.swift in Sources */,
