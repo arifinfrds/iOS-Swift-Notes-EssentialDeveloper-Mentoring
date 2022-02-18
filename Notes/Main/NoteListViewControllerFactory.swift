@@ -12,7 +12,7 @@ final class NoteListViewControllerFactory {
     
     private init() { }
     
-    static func makeNoteListiewController() -> UIViewController {
+    static func makeNoteListViewController() -> UIViewController {
         
         let makeViewController: () -> NoteListViewController = {
             let storyboard = UIStoryboard(name: "Main", bundle: .main)

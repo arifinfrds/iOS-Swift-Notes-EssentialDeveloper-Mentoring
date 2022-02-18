@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func makeRootViewController() -> UIViewController {
         return UINavigationController(
-            rootViewController: NoteListViewControllerFactory.makeNoteListiewController()
+            rootViewController: NoteListViewControllerFactory.makeNoteListViewController()
         )
     }
     
